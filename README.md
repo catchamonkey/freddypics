@@ -4,6 +4,10 @@
 
     php composer.phar install
 
-##Create a vhost for testing (or copy the one in root)
+##Create a vhost for testing
 
-##Update the AWS keys and secret (currently in the index.php file)
+or copy the one in root
+
+##Update the AWS keys and secret
+
+Currently in the index.php file
