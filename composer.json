@@ -1,0 +1,23 @@
+{
+    "name": "catchamonkey/freddypics",
+    "authors": [
+        {
+            "name": "Chris Sedlmayr",
+            "email": "chris@sedlmayr.co.uk"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://packages.zendframework.com/"
+        }
+    ],
+    "require": {
+        "silex/silex": "1.0.*",
+        "symfony/finder": "2.2.x-dev",
+        "twig/twig": ">=1.8,<2.0-dev",
+        "monolog/monolog": ">=1.0.0",
+        "zendframework/zendservice-amazon": "2.0.*"
+    },
+    "minimum-stability": "dev"
+}
