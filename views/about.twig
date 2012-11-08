@@ -46,12 +46,8 @@
       .marketing p + h4 {
         margin-top: 28px;
       }
-      .gallery-item {
+      #gallery img {
         width: 230px;
-        height: 150px;
-        overflow: hidden;
-        display: block;
-        float: left;
       }
     </style>
     <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
@@ -70,52 +66,31 @@
         <ul class="nav nav-pills pull-right">
           <li class="active"><a href="{{ app.url_generator.generate('about') }}">About</a></li>
         </ul>
-        <h3 class="muted">Freddy Pics</h3>
+        <h3 class="muted"><a href="{{ app.url_generator.generate('homepage') }}">Freddy Pics</a></h3>
       </div>
 
       <hr>
 
       <div class="jumbotron">
         <h1>Freddy Sedlmayr</h1>
-        <p class="lead">A few pictures of our son Freddy.</p>
       </div>
 
       <hr>
 
       <div class="row-fluid marketing">
-        <div class="span12" id="gallery">
-          <p>Click a picture to open the gallery</p>
-          {% for picture in pictures %}
-            <div class="gallery-item">
-              <a href="http://sharedfredpics.s3-website-eu-west-1.amazonaws.com/{{ picture.filename }}">
-                <img src="http://sharedfredpics.s3-website-eu-west-1.amazonaws.com/{{ picture.filename }}" width="230" alt="" />
-              </a>
-            </div>
-          {% endfor %}
+        <div class="span12">
+          <h2>About</h2>
+          
         </div>
       </div>
 
       <hr>
 
       <div class="footer">
-        <p>&copy; Sedlmayr {{ now|date('Y') }}</p>
+        <p>&copy; Sedlmayr 2012</p>
       </div>
 
     </div> <!-- /container -->
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../assets/js/jquery.js"></script>
-    <script src="../assets/js/jquery.lightbox-0.5.js"></script>
-
-    <script type="text/javascript">
-      $(document).ready(function() {
-          $('#gallery a').lightBox({
-            maxHeight: 500,
-            maxWidth: 700
-          });
-      })
-    </script>
   </body>
 </html>
