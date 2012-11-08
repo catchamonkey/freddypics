@@ -14,9 +14,9 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/../views',
 ));
 
-$app->register(new Silex\Provider\MonologServiceProvider(), array(
-    'monolog.logfile' => __DIR__.'/../log/development.log',
-));
+// $app->register(new Silex\Provider\MonologServiceProvider(), array(
+//     'monolog.logfile' => __DIR__.'/../log/development.log',
+// ));
 
 $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 
