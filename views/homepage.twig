@@ -90,11 +90,12 @@
 
       <div class="row-fluid marketing">
           {% for folderName,pictures in folders %}
-            <div class="span12 gallery" id="{{ folderName }}">
-              <h2>{{ folderName }}</h2>
+            <div class="span12 gallery" id="{{ folderName|replace({' ': ''}) }}">
+              <a name="{{ folderName }}"></a>
+              <h2><a href="#{{ folderName|replace({' ': ''}) }}">{{ folderName }}</a></h2>
               {% for picture in pictures %}
                 <div class="gallery-item">
-                  <a href="http://sharedfredpics.s3-website-eu-west-1.amazonaws.com/{{ folderName }}/{{ picture.filename }}">
+                  <a class="pic" href="http://sharedfredpics.s3-website-eu-west-1.amazonaws.com/{{ folderName }}/{{ picture.filename }}">
                     <img src="http://sharedfredpics.s3-website-eu-west-1.amazonaws.com/{{ folderName }}/{{ picture.filename }}" width="230" alt="" />
                   </a>
                 </div>
@@ -127,7 +128,7 @@
 
     <script type="text/javascript">
       $(document).ready(function() {
-          $('.gallery a').lightBox({
+          $('.gallery a.pic').lightBox({
             maxHeight: 500,
             maxWidth: 700
           });
