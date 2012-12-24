@@ -25,6 +25,21 @@ $app->get('/', function () use ($app, $key, $secret) {
 
     // temp pictures array until I can read it from S3...
     $folders = array(
+        'December 2012' => array(
+            array('filename' => 'P1020968.JPG'),
+            array('filename' => 'P1020939.JPG'),
+            array('filename' => 'P1020959.JPG'),
+            array('filename' => 'P1020963.JPG'),
+            array('filename' => 'P1020974.JPG'),
+            array('filename' => 'P1020982.JPG'),
+            array('filename' => 'P1020990.JPG'),
+            array('filename' => 'P1020994.JPG'),
+            array('filename' => 'P1020105.JPG'),
+            array('filename' => 'P1020108.JPG'),
+            array('filename' => 'P1020115.JPG'),
+            array('filename' => 'P1020125.JPG'),
+            array('filename' => 'P1020131.JPG'),
+        ),
         'nov 2012' => array(
             array('filename' => 'P1020857.JPG'),
             array('filename' => 'P1020885.JPG'),
